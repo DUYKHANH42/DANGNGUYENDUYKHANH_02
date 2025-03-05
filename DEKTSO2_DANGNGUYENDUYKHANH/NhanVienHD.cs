@@ -35,7 +35,6 @@ namespace DEKTSO2_DANGNGUYENDUYKHANH
             double Thuong= 0.1 * doanhthu;
             double LuongThucLanh= Thuong * LuongCung;
             return (int)LuongThucLanh;
-
         }
         // Phương thức ghi đè tính lương cho nhân viên hợp đồng
 

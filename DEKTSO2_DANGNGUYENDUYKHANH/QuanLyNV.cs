@@ -25,7 +25,7 @@ namespace DEKTSO2_DANGNGUYENDUYKHANH
         }
         public void KiemTraMaNV(string masonv)
         {
-            
+
             foreach (NhanVien NV in dsNhanVien)
             {
                 if (NV.MaSoNhanVien == masonv)
@@ -47,11 +47,8 @@ namespace DEKTSO2_DANGNGUYENDUYKHANH
                 NhanVien nv = null;
                 if (loai == 1)
                 {
-                    Console.Write("Nhập mã số nhân viên: ");
-                    nv.MaSoNhanVien = Console.ReadLine();
-
                     nv = new NhanVienBC();
-
+                    KiemTraMaNV(nv.MaSoNhanVien);
                 }
                 else if (loai == 2)
                 {
@@ -65,9 +62,10 @@ namespace DEKTSO2_DANGNGUYENDUYKHANH
                 }
                 nv.Nhap();
                 dsNhanVien.Add(nv);
+                Console.WriteLine("Thêm Nhân Viên Thành Công");
                 Console.WriteLine("Bạn có muốn nhập tiếp không? (Y/N): ");
                 chon = Console.ReadLine();
-            } while (chon.ToUpperInvariant() == "y");
+            } while (chon =="Y" || chon == "y");
         }
         // phương thức nhập danh sách nhân viên
 

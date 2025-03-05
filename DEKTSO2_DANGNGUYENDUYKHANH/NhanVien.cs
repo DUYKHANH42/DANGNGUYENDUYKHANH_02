@@ -43,6 +43,8 @@ namespace DEKTSO2_DANGNGUYENDUYKHANH
         // properties luongcung
         public virtual void Nhap()
         {
+            Console.Write("Nhập mã số nhân viên: ");
+             masonv = Console.ReadLine();
             Console.Write("Nhập họ tên nhân viên: ");
             hoten = Console.ReadLine();
             Console.Write("Nhập lương cứng: ");
